@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+<div class="w-full h-96 bg-cover bg-center" style="background-image: url('/assets/cover.jpeg');"></div>
+<div class="container mx-auto px-4">
+    <!-- Header image -->
+    
+  
+    <!-- Products section -->
+    <div class="my-8">
+      <h1 class="text-3xl text-center mt-10 mb-10">Igračke</h1>
+  
+      <div class="grid md:grid-cols-4 gap-8 mt-6">
+        <!-- Filters Column -->
+        <div class="col-span-1">
+            <div class="mb-4">
+              <h3 class="font-lato text-xl mb-2">Filteri</h3>
+              <div class="mb-4">
+                <div class="flex items-center">
+                  <input type="checkbox" id="igracke" class="mr-2" [(ngModel)]="filters.igracke" />
+                  <label for="igracke" class="font-lato">Igračke</label>
+                  <span class="ml-2">{{ isIgrackeExpanded ? '▼' : '►' }}</span>
+                </div>
+                <div *ngIf="filters.igracke" class="ml-4 mt-2">
+                  <input type="checkbox" id="pamučne" class="mr-2" [(ngModel)]="filters.pamucne" />
+                  <label for="pamučne" class="font-lato">Pamučne</label>
+                </div>
+                <div *ngIf="filters.igracke" class="ml-4 mt-2">
+                  <input type="checkbox" id="plišane" class="mr-2" [(ngModel)]="filters.plisane" />
+                  <label for="plišane" class="font-lato">Plišane</label>
+                </div>
+                <div *ngIf="filters.igracke" class="ml-4 mt-2">
+                  <input type="checkbox" id="interaktivne" class="mr-2" [(ngModel)]="filters.interaktivne" />
+                  <label for="interaktivne" class="font-lato">Interaktivne</label>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="flex items-center">
+                  <input type="checkbox" id="baby" class="mr-2" [(ngModel)]="filters.baby" />
+                  <label for="baby" class="font-lato">Baby</label>
+                </div>
+                <div *ngIf="filters.baby" class="ml-4 mt-2">
+                  <input type="checkbox" id="zvečke" class="mr-2" [(ngModel)]="filters.zvecke" />
+                  <label for="zvečke" class="font-lato">Zvečke</label>
+                </div>
+                <div *ngIf="filters.baby" class="ml-4 mt-2">
+                  <input type="checkbox" id="glodalice" class="mr-2" [(ngModel)]="filters.glodalice" />
+                  <label for="glodalice" class="font-lato">Glodalice</label>
+                </div>
+                <div *ngIf="filters.baby" class="ml-4 mt-2">
+                  <input type="checkbox" id="baby-box" class="mr-2" [(ngModel)]="filters.babyBox" />
+                  <label for="baby-box" class="font-lato">Baby Box</label>
+                </div>
+              </div>
+              <div class="ml-4 mt-2">
+                <input type="checkbox" id="mama-kcerka" class="mr-2" [(ngModel)]="filters.mamaKcerka" />
+                <label for="mama-kcerka" class="font-lato">Mama i Kćerka</label>
+              </div>
+              <div class="ml-4 mt-2">
+                <input type="checkbox" id="premium" class="mr-2" [(ngModel)]="filters.premium" />
+                <label for="premium" class="font-lato">Premium</label>
+              </div>
+            </div>
+          </div>
+  
+        <!-- Products Column -->
+        <div class="col-span-3">
+          <div class="flex justify-end mb-4">
+            <select [(ngModel)]="sortOption" class=" rounded px-1 py-2">
+              <option value="default">Sortiraj</option>
+              <option value="priceAsc">Cena: Rastuća</option>
+              <option value="priceDesc">Cena: Opadajuća</option>
+            </select>
+          </div>
+  
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div *ngFor="let product of filteredProducts()" (click)="openIgracka(product)" class="border rounded-3xl overflow-hidden hover:shadow-xl transition-shadow">
+              <img [src]="product.image" alt="{{ product.name }}" class="w-full h-96 object-cover">
+              <div class="p-4 text-center">
+                <h2 class="font-lato text-lg">{{ product.name }}</h2>
+                <p class="font-lato text-gray-500">{{ product.price | currency:'USD' }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+  

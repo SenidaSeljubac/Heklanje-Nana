@@ -1,0 +1,263 @@
+<app-navbar></app-navbar>
+<!-- hero.component.html -->
+<section class="relative bg-cover bg-center h-screen" style="background-image: url('/assets/hero-photo.png')">
+    <!-- Overlay (optional, for darker background) -->
+    <div class="absolute inset-0 bg-red-950 opacity-60"></div>
+
+    <!-- Content of the hero section -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+        <h1 class="text-6xl font-bold mb-4 font-serif">Heklane s ljubavlju.</h1>
+        <p class="text-3xl mb-6">Pronađite savršene igračke koje će osvojiti<br>srca vaših mališana.</p>
+        <div class="flex flex-row gap-6 mt-6">
+            <a href="#" class="w-48 py-4 text-base bg-white text-rose-500 font-semibold tracking-wide rounded-full hover:bg-rose-500 hover:text-white transition-all duration-300">
+                Naruči odmah
+            </a>
+            <a href="#"
+                class="w-48 py-4 text-base border border-white text-white font-semibold tracking-wide rounded-full hover:bg-rose-500 hover:text-white hover:border-rose-500 transition-all duration-300">
+                Vidi kolekciju
+            </a>
+        </div>
+    </div>
+</section>
+<div class="mx-60">
+    <!-- kategorije.component.html -->
+    <section class="py-16 text-center">
+        <!-- Section title -->
+        <h2 class="text-4xl font-bold text-gray-900 mb-20">Kategorije</h2>
+
+        <!-- Icon categories -->
+        <div class="flex justify-center space-x-24">
+
+            <!-- Category 1 -->
+            <div class="flex flex-col items-center">
+                <div class="w-24 h-24 flex items-center justify-center bg-pink-50 hover:bg-pink-100 rounded-full">
+                    <img src="/assets/toys.png" alt="Igračke" class="w-12 h-12">
+                </div>
+                <p class="mt-4 text-2xl font-semibold text-gray-900 font-serif">Igračke</p>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="flex flex-col items-center">
+                <div class="w-24 h-24 flex items-center justify-center bg-pink-50 hover:bg-pink-100 rounded-full">
+                    <img src="/assets/hair-clip.png" alt="Aksesoari" class="w-12 h-12">
+                </div>
+                <p class="mt-4 text-2xl font-semibold text-gray-900 font-serif">Aksesoari</p>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="flex flex-col items-center">
+                <div class="w-24 h-24 flex items-center justify-center bg-pink-50 hover:bg-pink-100 rounded-full">
+                    <img src="/assets/pacifier.png" alt="Baby" class="w-12 h-12">
+                </div>
+                <p class="mt-4 text-2xl font-semibold text-gray-900 font-serif">Baby</p>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="flex flex-col items-center">
+                <div class="w-24 h-24 flex items-center justify-center bg-pink-50 hover:bg-pink-100 rounded-full">
+                    <img src="/assets/diamond.png" alt="Premium" class="w-12 h-12">
+                </div>
+                <p class="mt-4 text-2xl font-semibold text-gray-900 font-serif">Premium</p>
+            </div>
+        </div>
+    </section>
+    <section class="mt-10 mb-10 text-center ">
+        <h2 class="text-4xl font-bold text-gray-900 mb-20">Izdvojene igračke</h2>
+        <div class="flex flex-row gap-36">
+            <div
+                class="  mt-11 w-96 transform overflow-hidden rounded-3xl bg-white dark:bg-slate-800 shadow-md duration-300 hover:scale-105 hover:shadow-2xl">
+                <img class="h-96 w-full object-cover object-center" src="/assets/meda.jpeg" alt="Product Image" />
+                <div class="p-4">
+                    <h2 class="mb-2 text-2xl text-left font-serif font-semibold dark:text-white text-gray-900">Product
+                        Name</h2>
+                    <p class="mb-2 text-left text-base dark:text-gray-300 text-gray-700">Product description goes here.
+                    </p>
+                    <div class="flex items-center">
+                        <p class="mr-2 text-lg font-semibold text-rose-500 dark:text-white">$20.00</p>
+                        <p class="text-base  font-medium text-gray-500 line-through dark:text-gray-300">$25.00</p>
+
+                    </div>
+                </div>
+            </div>
+            <div
+                class=" mt-11 w-96 transform overflow-hidden rounded-3xl bg-white dark:bg-slate-800 shadow-md duration-300 hover:scale-105 hover:shadow-2xl">
+                <img class="h-96 w-full object-cover object-center" src="/assets/meda.jpeg" alt="Product Image" />
+                <div class="p-4">
+                    <h2 class="mb-2 text-2xl text-left font-serif font-semibold dark:text-white text-gray-900">Product
+                        Name</h2>
+                    <p class="mb-2 text-left text-base dark:text-gray-300 text-gray-700">Product description goes here.
+                    </p>
+                    <div class="flex items-center">
+                        <p class="mr-2 text-lg font-semibold text-rose-500 dark:text-white">$20.00</p>
+                        <p class="text-base  font-medium text-gray-500 line-through dark:text-gray-300">$25.00</p>
+
+                    </div>
+                </div>
+            </div>
+            <div
+                class=" mt-11 w-96 transform overflow-hidden rounded-3xl bg-white dark:bg-slate-800 shadow-md duration-300 hover:scale-105 hover:shadow-2xl">
+                <img class="h-96 w-full object-cover object-center" src="/assets/meda.jpeg" alt="Product Image" />
+                <div class="p-4">
+                    <h2 class="mb-2 text-2xl text-left font-serif font-semibold dark:text-white text-gray-900">Product
+                        Name</h2>
+                    <p class="mb-2 text-left text-base dark:text-gray-300 text-gray-700">Product description goes here.
+                    </p>
+                    <div class="flex items-center">
+                        <p class="mr-2 text-lg font-semibold text-rose-500 dark:text-white">$20.00</p>
+                        <p class="text-base  font-medium text-gray-500 line-through dark:text-gray-300">$25.00</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class=" text-xl text-rose-500 hover:text-rose-600 cursor-pointer font-bold text-end mt-10">POGLEDAJ VIŠE</p>
+    </section>
+    <!-- Features -->
+    <div class=" lg:py-20">
+        <!-- Grid -->
+        <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+            <div class="order-last">
+                <img class="rounded-xl h-full" src="/assets/slon.jpeg" alt="Features Image">
+            </div>
+            <!-- End Col -->
+
+            <div class="mt-5 sm:mt-10 lg:mt-0">
+                <div class="space-y-6">
+                    <!-- Title -->
+                    <div class="space-y-2 lg:space-y-8  flex flex-col">
+                        <p class="text-rose-500 font-sans font-extrabold tracking-wide ">TOP RATED</p>
+                        <h2 class="font-bold text-3xl lg:text-5xl text-gray-800 dark:text-neutral-200">
+                            Slatki plavi slonić
+                        </h2>
+                        <p class="text-gray-500 dark:text-neutral-500 text-2xl">
+                            Otkrijte zašto je naša igračka omiljena među roditeljima i decom. Kvalitet, sigurnost i
+                            mašta u svakom šavu!
+                        </p>
+                        <a href="#"
+                            class="w-48 py-4 text-center text-base bg-pink-50 text-rose-500 font-semibold rounded-full tracking-wide hover:bg-rose-500 hover:text-white transition-all duration-300">
+                            Naruči odmah
+                        </a>
+                    </div>
+
+                    <!-- End Title -->
+
+
+                </div>
+
+            </div>
+
+            <!-- End Col -->
+        </div>
+        <!-- End Grid -->
+    </div>
+    <!-- End Features -->
+</div>
+<app-carousel></app-carousel>
+<div class="mx-60">
+    <div class=" lg:py-20">
+        <!-- Grid -->
+        <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+            <div class="order-first">
+                <img class="rounded-xl h-full" src="/assets/slon.jpeg" alt="Features Image">
+            </div>
+            <!-- End Col -->
+
+            <div class="mt-5 sm:mt-10 lg:mt-0">
+                <div class="space-y-6">
+                    <!-- Title -->
+                    <div class="space-y-2 lg:space-y-8  flex flex-col">
+                        <p class="text-rose-500 font-sans font-extrabold tracking-wide ">MOJA PRIČA</p>
+                        <h2 class="font-bold text-3xl lg:text-5xl text-gray-800 dark:text-neutral-200">
+                            Šta je Heklanje Nana?
+                        </h2>
+                        <p class="text-gray-500 dark:text-neutral-500 text-2xl">
+                            Ja sam Ana, talentovana heklačica koja s ljubavlju stvara igračke i donosi radost deci širom
+                            zemlje.
+                        </p>
+                        <p class="text-gray-500 dark:text-neutral-500 text-2xl">
+                            Svaka moja igračka nosi deo moje duše. Ručno izrađene sa pažnjom i posvećenošću, koristim
+                            samo najkvalitetnije materijale da bih osigurala da su igračke sigurne i lepe za igru.
+                        </p>
+                        <p class="text-gray-500 dark:text-neutral-500 text-2xl">
+                            Moje igračke postaju omiljeni saputnici mališana, stvarajući uspomene koje traju. Pridružite
+                            mi se na ovom putovanju ljubavi i kreativnosti, i otkrijte kako moje unikatne kreacije mogu
+                            obogatiti živote vaših najmilijih!
+                        </p>
+                        <a href="#"
+                            class="w-48 py-4 text-center text-base bg-pink-50 text-rose-500 font-semibold rounded-full hover:bg-rose-500 hover:text-white transition-all duration-300">
+                            Naruči odmah
+                        </a>
+                    </div>
+
+                    <!-- End Title -->
+
+
+                </div>
+
+            </div>
+
+            <!-- End Col -->
+        </div>
+        <!-- End Grid -->
+    </div>
+    <div class="max-w-full my-20 pb-20">
+
+
+        <div class="flex flex-col items-center justify-center mb-20">
+            <h2 class="text-center text-2xl font-semibold mb-6 text-rose-500">FAQ</h2>
+            <h3 class="text-center text-4xl font-bold mb-6">Često postavljana pitanja</h3>
+            <p class="w-1/2 text-center text-2xl text-gray-500 mb-8 text-balance">Ovde ćete pronaći odgovore na najčešća
+                pitanja o našim
+                igračkama, procesu naručivanja i uslugama.</p>
+        </div>
+
+        <div class="flex gap-6">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-6 w-full md:w-1/2">
+              <div *ngFor="let faq of leftColumnFaqs" 
+                   class="faq-item bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <button class="flex justify-between items-center w-full text-left" (click)="toggleFAQ(faq)">
+                  <span class="font-bold">{{ faq.question }}</span>
+                  <svg class="w-6 h-6 rounded-md text-rose-500 transition-transform" [class.rotate-180]="faq.isOpen" fill="none"
+                       stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div *ngIf="faq.isOpen" class="mt-4 text-gray-600 overflow-hidden">
+                  {{ faq.answer }}
+                </div>
+              </div>
+            </div>
+          
+            <!-- Right Column -->
+            <div class="flex flex-col gap-6 w-full md:w-1/2">
+              <div *ngFor="let faq of rightColumnFaqs" 
+                   class="faq-item bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <button class="flex justify-between items-center w-full text-left" (click)="toggleFAQ(faq)">
+                  <span class="font-bold">{{ faq.question }}</span>
+                  <svg class="w-6 h-6 rounded-md text-rose-500 transition-transform" [class.rotate-180]="faq.isOpen" fill="none"
+                       stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div *ngIf="faq.isOpen" class="mt-4 text-gray-600 overflow-hidden">
+                  {{ faq.answer }}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+
+
+    </div>
+
+
+
+
+
+</div>
+<app-footer></app-footer>

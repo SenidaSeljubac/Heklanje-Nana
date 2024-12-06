@@ -1,0 +1,89 @@
+<!-- navbar.component.html -->
+<nav class="bg-white py-4  shadow-md">
+  <div class="max-w-full mx-auto px-8 flex items-center justify-evenly">
+    <!-- Left: Logo -->
+    <div class="mr-auto flex items-center space-x-2 w-60">
+      <div class="text-3xl text-pink-300">
+        <img src="/assets/nana-logo.png" alt="Nana Logo">
+      </div>
+    </div>
+
+    <!-- Center: Menu items -->
+    <nav class="bg-white">
+      <div class="container mx-auto">
+        <!-- Navbar -->
+        <div class="">
+          <ul class="flex space-x-10 text-base tracking-wide font-semibold">
+            <li class="flex flex-grow group">
+              <a href="#" class="text-gray-600 hover:text-red-500 inline-block"
+                (click)="openCategories()">Kategorije</a>
+              <!-- Dropdown Menu -->
+              <div *ngIf="categories"
+                class="absolute left-0 right-0 top-[83px] z-50 w-full bg-white transition-all duration-300 transform ">
+                <div class="flex flex-row items-center justify-center p-5 space-y-2 space-x-36">
+                  <a href="#" class="hover:bg-gray-100 p-2 mt-2 hover:cursor-pointer"
+                    (click)="openIgracke()">Igračke</a>
+                  <a href="#" class="hover:bg-gray-100 p-2" (click)="openBaby()">Baby</a>
+                  <a href="#" class="hover:bg-gray-100 p-2">Aksesoari</a>
+                  <a href="#" class="hover:bg-gray-100 p-2">Premium</a>
+                </div>
+                <div *ngIf="igracke" class="flex flex-row items-center justify-center p-5 space-y-2 space-x-36">
+                  <a href="#" class="hover:bg-gray-100 p-2 flex flex-col justify-center items-center"><img
+                      src="/assets/pamucne.png" class="mb-2">Pamučne</a>
+                  <a href="#" class="hover:bg-gray-100 p-2 flex flex-col justify-center items-center"><img
+                      src="/assets/plisane.png" class="mb-2">Plišane</a>
+                  <a href="#" class="hover:bg-gray-100 p-2 flex flex-col justify-center items-center"><img
+                      src="/assets/interaktivne.png" class="mb-2">Interaktivne</a>
+                  <a href="/categories" class="hover:bg-gray-100 p-2 flex flex-col justify-center items-center"><img
+                      src="/assets/plisane.png" class="mb-2">Sve igračke</a>
+                </div>
+                <div *ngIf="baby" class="flex flex-row items-center justify-center p-5 space-y-2 space-x-36">
+                  <a href="#" class="hover:bg-gray-100 p-2 flex flex-col justify-center items-center"><img
+                      src="/assets/pamucne.png" class="mb-2">Baby</a>
+                  <a href="#" class="hover:bg-gray-100 p-2 flex flex-col justify-center items-center"><img
+                      src="/assets/plisane.png" class="mb-2">Plišane</a>
+                  <a href="#" class="hover:bg-gray-100 p-2 flex flex-col justify-center items-center"><img
+                      src="/assets/interaktivne.png" class="mb-2">Interaktivne</a>
+                  <a href="#" class="hover:bg-gray-100 p-2 flex flex-col justify-center items-center"><img
+                      src="/assets/plisane.png" class="mb-2">Sve igračke</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="/about" class="text-gray-600 hover:text-red-500">O meni</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-red-500" (click)="openPatterns()">Paterni</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-red-500" (click)="openContactForm()">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+
+
+    <div class="ml-auto flex justify-center items-center text-gray-700 w-60 relative">
+      <input type="text" class="
+          w-full
+          p-2
+          
+          rounded-full
+          border
+          border-rose-200
+          focus:ring-rose-400
+          focus:ring-1
+          
+          pr-8
+          focus:outline-none
+        " placeholder="Pr. Plišani meda" [(ngModel)]="searchQuery" (input)="onSearchChange()" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" viewBox="0 0 24 24"
+        class="absolute top-1/2 right-4 -translate-y-1/2 mb-1 text-rose-200">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314" />
+      </svg>
+    </div>

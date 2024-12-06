@@ -1,0 +1,51 @@
+/* Hide the scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Animation to scroll content continuously */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 10s linear infinite;
+  width: 100%;
+}
+
+/* Add styles to the testimonial cards */
+.card {
+  flex: 0 0 auto;  /* Prevent cards from shrinking */
+  width: 320px;    /* Card width */
+  margin-right: 1rem; /* Space between cards */
+}
+
+.carousel-container {
+  animation: scroll-left 20s linear infinite; /* Adjust animation duration and easing as needed */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust the translation distance as needed */
+  }
+}

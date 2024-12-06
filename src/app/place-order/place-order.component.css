@@ -1,0 +1,3 @@
+input[type="radio"] {
+    accent-color: red; /* This will change the radio button's color when selected in modern browsers */
+}
